@@ -518,7 +518,7 @@
         </div>
 
         <div class="round2-cards" id="round2Cards">
-            <!-- Le carte del secondo round devo veni generate da JavaScript auglioo  -->
+            <!-- le carte del secondo round devo veni generate da JavaScript auglioo  -->
         </div>
 
         <footer>
@@ -531,7 +531,7 @@
     </div>
 
     <script>
-        // Funzioni per generare suoni con Web Audio me cojons 
+        // funzioni per generare suoni con Web Audio me cojons 
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
         function playCardSound(cardType) {
@@ -674,7 +674,7 @@
                 timeOffset += note.duration;
             });
             
-            // Ripeti ogni 10 secondi
+            // ripeti ogni 10 secondi
             setTimeout(playBackgroundMusic, 10000);
         }
 
@@ -757,12 +757,12 @@
             playCardSound(index);
             flippedCards++;
             
-            // Trigger jackpot solo sulla terza carta (AMORE INTENSO)
+            // trigger jackpot solo sulla terza carta (AMORE INTENSO)
             if (wrapper.classList.contains('flipped') && index === 2) {
                 triggerJackpot();
             }
             
-            // Dopo aver girato tutte le carte, mostra il pulsante retry
+            // dopo aver girato tutte le carte, mostra il pulsante retry
             if (flippedCards === totalCards) {
                 setTimeout(() => {
                     document.getElementById('retryButton').style.display = 'inline-block';
@@ -773,18 +773,18 @@
         function startRound2() {
             playEvilLaugh();
             
-            // Cambia colore pagina in viola oscuro
+            // amo cambia colore pagina in viola oscuro
             document.body.style.background = '#2D1B69';
             
-            // Nasconde gli elementi del primo round
+            // nascondii gli elementi del primo round
             document.getElementById('cardsContainer').style.display = 'none';
             document.getElementById('retryButton').style.display = 'none';
             document.getElementById('header').style.display = 'none';
             
-            // Mostra l'insegna di pericolo
+            // omg mostra l'insegna di pericolo
             document.getElementById('dangerSign').style.display = 'inline-block';
             
-            // Dopo 2 secondi, mostra le nuove carte
+            // dopo due secondi mostra le nuove carte
             setTimeout(() => {
                 document.getElementById('dangerSign').style.display = 'none';
                 createRound2Cards();
@@ -847,7 +847,7 @@
                 }, 3000);
             }
             
-            // Applica animazione dopo un breve delay
+            // we applica animazione dopo un breve delay
             setTimeout(() => {
                 const backCard = wrapper.querySelector('.round2-flip-card-back');
                 
@@ -900,7 +900,7 @@
             }
         }
 
-        // Inizializza le carte al caricamento
+        // inizializza le carte al caricamento
         window.addEventListener('DOMContentLoaded', () => {
             createCards();
             playBackgroundMusic();
